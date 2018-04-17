@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Review Kony Project"
+            id="com.kony.tag.codereview.commands.category">
+      </category>
+      <command
+            name="Review Kony Project"
+            categoryId="com.kony.tag.codereview.commands.category"
+            id="com.kony.tag.codereview.commands.sampleCommand">
+      </command>
+
+	  <category
+            id="com.kony.tag.category.addCodePreview"
+            name="Add Code Preview">
+      </category>
+      <command
+            categoryId="com.kony.tag.category.addCodePreview"
+            id="com.kony.tag.commands.addCodePreview"
+            name="Add Code Preview">
+      </command>
+	  
+	  <category
+            id="com.kony.tag.category.deleteCodePreview"
+            name="Remove Code Preview">
+      </category>
+      <command
+            categoryId="com.kony.tag.category.deleteCodePreview"
+            id="com.kony.tag.commands.deleteCodePreview"
+            name="Remove Code Preview">
+      </command>
+	  
+	  <category
+            id="com.kony.tag.category.previewCode"
+            name="Preview Code">
+      </category>
+      <command
+            categoryId="com.kony.tag.category.previewCode"
+            id="com.kony.tag.commands.previewCode"
+            name="Preview Code">
+      </command>
+      <category
+            id="com.kony.tag.arabiclayout.deleteArabicResources"
+            name="Delete Resources">
+      </category>
+      <command
+            categoryId="com.kony.tag.arabiclayout.deleteArabicResources"
+            id="com.kony.tag.arabiclayout.commands.deleteArabicResource"
+            name="Delete Resources">
+      </command>
+      <category
+            id="com.kony.tag.arabiclayout.incrementalbuild"
+            name="Run Arabic Layout Tool (Incrememtal)">
+      </category>
+      <command
+            categoryId="com.kony.tag.arabiclayout.incrementalbuild"
+            id="com.kony.tag.arabiclayout.commands.incrementalbuild"
+            name="Run Arabic Layout Tool (Incremental Build)">
+      </command>
+      <command
+            categoryId="com.kony.tag.arabiclayout.cleanbuild"
+            id="com.kony.tag.arabiclayout.commands.cleanbuild"
+            name="Arabic Layout Tool (Clean Build)">
+      </command>
+      <category
+            id="com.kony.tag.arabiclayout.cleanbuild"
+            name="Arabic Layout Tool (Clean Build)">
+      </category>
+      <category
+            id="com.kony.tag.codereview.addresources"
+            name="Add Resources">
+      </category>
+      <command
+            categoryId="com.kony.tag.codereview.addresources"
+            id="com.kony.tag.codereview.commands.addresources"
+            name="Add Resources">
+      </command>
+      <category
+            id="com.kony.tag.codereview.deleteresources"
+            name="Delete Resources">
+      </category>
+      <command
+            categoryId="com.kony.tag.codereview.deleteresources"
+            id="com.kony.tag.codereview.commands.deleteresources"
+            name="Delete Resources">
+      </command>
+      <category
+            id="com.kony.tag.arabiclayout.addArabicResource"
+            name="Add Resources">
+      </category>
+      <command
+            categoryId="com.kony.tag.arabiclayout.addArabicResource"
+            id="com.kony.tag.arabiclayout.commands.addArabicResource"
+            name="Add Resources">
+      </command>
+      <category
+            id="com.kony.tag.instrumentation.addResource"
+            name="Add Resource">
+      </category>
+      <command
+            categoryId="com.kony.tag.arabiclayout.commands.addArabicResource"
+            id="com.kony.tag.instrumentation.commands.addResource"
+            name="Add Resources">
+      </command>
+      <category
+            id="com.kony.tag.instrumentation.deleteResource"
+            name="Delete Resource">
+      </category>
+      <command
+            categoryId="com.kony.tag.instrumentation.deleteResource"
+            id="com.kony.tag.instrumentation.commands.deleteResource"
+            name="Delete Resources">
+      </command>
+      <category
+            id="com.kony.tag.instrumentation.executeInstumentation"
+            name="Instrument Code">
+      </category>
+      <command
+            categoryId="com.kony.tag.instrumentation.executeInstumentation"
+            id="com.kony.tag.instrumentation.commands.instrumentCode"
+            name="Instrument Code">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.kony.tag.codereview.commands.sampleCommand"
+            class="com.kony.tag.codereview.handlers.ReviewHandler">
+      </handler>
+	  
+	  <handler
+            class="com.kony.tag.codepreview.handlers.AddResourcesHandler"
+            commandId="com.kony.tag.commands.addCodePreview">
+      </handler>
+	  
+	  <handler
+            class="com.kony.tag.codepreview.handlers.DeleteResourcesHandler"
+            commandId="com.kony.tag.commands.deleteCodePreview">
+      </handler>
+	  
+	  <handler
+            class="com.kony.tag.codepreview.handlers.CodePreviewHandler"
+            commandId="com.kony.tag.commands.previewCode">
+      </handler>
+   <handler
+         class="com.kony.tag.arabiclayout.handlers.AddArabicResourcesHandler"
+         commandId="com.kony.tag.arabiclayout.commands.addArabicResource">
+   </handler>
+   <handler
+         class="com.kony.tag.arabiclayout.handlers.DeleteArabicResourcesHandler"
+         commandId="com.kony.tag.arabiclayout.commands.deleteArabicResource">
+   </handler>
+   <handler
+         class="com.kony.tag.arabiclayout.handlers.ArabicLayoutHandler"
+         commandId="com.kony.tag.arabiclayout.commands.incrementalbuild">
+   </handler>
+   <handler
+         class="com.kony.tag.arabiclayout.handlers.CleanBuildHandler"
+         commandId="com.kony.tag.arabiclayout.commands.cleanbuild">
+   </handler>
+   <handler
+         class="com.kony.tag.codereview.handlers.AddCodeReviewResourcesHandler"
+         commandId="com.kony.tag.codereview.commands.addresources">
+   </handler>
+   <handler
+         class="com.kony.tag.codereview.handlers.DeleteCodeReviewResourcesHandler"
+         commandId="com.kony.tag.codereview.commands.deleteresources">
+   </handler>
+   <handler
+         class="com.kony.tag.instrumentation.handlers.AddInstrumentationResourcesHandler"
+         commandId="com.kony.tag.instrumentation.commands.addResource">
+   </handler>
+   <handler
+         class="com.kony.tag.instrumentation.handlers.DeleteInstrumentationResourcesHandler"
+         commandId="com.kony.tag.instrumentation.commands.deleteResource">
+   </handler>
+   <handler
+         class="com.kony.tag.instrumentation.handlers.InstrumentationHandler"
+         commandId="com.kony.tag.instrumentation.commands.instrumentCode">
+   </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+			   id="com.kony.tag.menus.sampleMenu"
+               label="TAG"
+               mnemonic="M">
+   <menu
+         icon="icons/logo.png"
+         label="Code Review">
+      <command
+            commandId="com.kony.tag.codereview.commands.addresources"
+            id="com.kony.tag.codereview.menus.addresources"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.codereview.commands.deleteresources"
+            id="com.kony.tag.codereview.menus.deleteresources"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.codereview.commands.sampleCommand"
+            id="com.kony.tag.codereview.menus.sampleCommand"
+            style="push">
+      </command>
+   </menu>
+   <menu
+         icon="icons/CodePreview.png"
+         label="Code Preview">
+      <command
+            commandId="com.kony.tag.commands.addCodePreview"
+            id="com.kony.tag.menus.addCodePreview"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.commands.deleteCodePreview"
+            id="com.kony.tag.menus.deleteCodePreview"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.commands.previewCode"
+            id="com.kony.tag.menus.previewCode"
+            style="push">
+      </command>
+   </menu>
+   <menu
+         label="Arabic Layout">
+      <command
+            commandId="com.kony.tag.arabiclayout.commands.addArabicResource"
+            id="com.kony.tag.menu.addresources"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.arabiclayout.commands.deleteArabicResource"
+            id="com.kony.tag.menu.deleteresources"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.arabiclayout.commands.incrementalbuild"
+            icon="icons/arabiclayout.png"
+            id="com.kony.tag.menu.incrementalbuild"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.arabiclayout.commands.cleanbuild"
+            icon="icons/cleanbuild.png"
+            id="com.kony.tag.menu.cleanbuild"
+            style="push">
+      </command>
+   </menu>
+   <menu
+         label="Code Instrumentation">
+      <command
+            commandId="com.kony.tag.instrumentation.commands.addResource"
+            id="com.kony.tag.menu.instrumentation.addresources"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.instrumentation.commands.deleteResource"
+            id="com.kony.tag.menu.instrumentation.deleteresources"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.instrumentation.commands.instrumentCode"
+            id="com.kony.tag.menu.instrumentation.instrumentCode"
+            style="push">
+      </command>
+   </menu>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.kony.tag.codereview.toolbars.sampleToolbar">
+            <command
+                  commandId="com.kony.tag.codereview.commands.sampleCommand"
+                  icon="icons/logo.png"
+                  tooltip="Review Kony Project"
+                  id="com.kony.tag.codereview.toolbars.sampleCommand">
+            </command>
+			<command
+                  commandId="com.kony.tag.commands.previewCode"
+                  icon="icons/CodePreview.png"
+                  id="com.kony.tag.toolbars.previewCode"
+                  tooltip="Preview Code">
+            </command>
+   <command
+         commandId="com.kony.tag.arabiclayout.commands.incrementalbuild"
+         icon="icons/arabiclayout.png"
+         id="com.kony.tag.toolbars.arabiclayout"
+         style="push"
+         tooltip="Run Arabic Layout Tool (Incremental Build)">
+   </command>
+         </toolbar>
+      </menuContribution>
+	  <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+   <menu
+         id="com.kony.tag.menus.tagMenu"
+         label="TAG"
+         mnemonic="N">
+      <command
+            commandId="com.kony.tag.codereview.commands.sampleCommand"
+            label="Review Kony Project"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.commands.addCodePreview"
+            label="Add Code Preview"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.commands.deleteCodePreview"
+            label="Remove Code Preview"
+            style="push">
+      </command>
+      <command
+            commandId="com.kony.tag.commands.previewCode"
+            label="Preview Code"
+            style="push">
+      </command>
+   </menu>
+      </menuContribution>
+   </extension>
+</plugin>
